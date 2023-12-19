@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+    min-height: 50vh;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card{
+    height: 200px;
+    margin: 5px 0;
+    width: 300px;
+    background-color: white;
+    
+}

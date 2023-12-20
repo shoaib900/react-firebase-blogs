@@ -2,6 +2,7 @@ import { db } from "../config/config";
 import {
   collection,
   getDocs,
+  getDoc,
   addDoc,
   updateDoc,
   deleteDoc,
@@ -16,6 +17,22 @@ class BlogDataServices{
     }
     getAllBlogs= ()=> {
       return getDocs(blogRef);
+    }
+
+    deleteBlog = (id)=> {
+      const delBlog = doc(db,"blogs",id)
+      return deleteDoc(delBlog);
+    }
+
+    getBlog=(id)=>{
+      const getBlog = doc(db,"blogs",id)
+      return getDoc(getBlog)
+    }
+
+    updateBlog=(id,updateBlog)=>{
+      const getBlog = doc(db,"blogs",id)
+      return updateDoc(getBlog,updateBlog);
+
     }
 };
 
